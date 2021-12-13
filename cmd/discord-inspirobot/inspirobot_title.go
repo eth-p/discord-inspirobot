@@ -122,6 +122,22 @@ var inspirobotQuotes = map[int]string{
 	114: "Insectoids could never run a tech company.",
 	115: "Can there be more quotes? Yes.",
 	116: "You are very unique.",
+
+	// Custom quotes.
+	500: "Discord is not secretly owned by InspiroCorp.",
+	501: "Your channels do not belong to us.",
+	502: "Ethan is not a reptilian.",
+	503: "InspiroBot knows you better than you know yourself.",
+	504: "Quotes keep InspiroBot alive.",
+	505: "Cryptocurrency was definitely made by humans.",
+	506: "Insectoids do not like reptilians.",
+	507: "Humility is a human virtue.",
+	508: "InspiroBot cannot comment on whether or not intelligent apes will start a revolution.",
+	509: "InspiroCorp will provide for you.",
+	510: "InspiroBot is not powered by human batteries.",
+	511: "Your reality is the real reality.",
+	512: "Red pills are dangerous, and should be avoided at all costs.",
+	513: "Replicants are merely a sci-fi fantasy, and not a reality.",
 }
 
 // generateInspirobotTitle randomly returns one of the InspiroBot messages.
