@@ -57,8 +57,10 @@ func init() {
 
 					// Respond with the contents of the original interaction.
 					titleQuote := getInspirobotTitle(titleId)
+					embed := makeQuoteEmbed(titleQuote, quoteUrl)
+					embed.Description = fmt.Sprintf("Inspirational quote shared by %s.", interaction.Interaction.Member.Mention())
 					interaction.Respond(&discordgo.InteractionResponseData{
-						Embeds: []*discordgo.MessageEmbed{makeQuoteEmbed(titleQuote, quoteUrl)},
+						Embeds: []*discordgo.MessageEmbed{embed},
 					})
 
 					// Add it to the LRU to prevent spamming.
