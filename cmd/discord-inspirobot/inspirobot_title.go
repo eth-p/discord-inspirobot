@@ -124,8 +124,9 @@ var inspirobotQuotes = map[int]string{
 	116: "You are very unique.",
 }
 
-// generateInspirationalQuote returns an inspirational quote.
-func generateInspirationalQuote() (int, string) {
+// generateInspirobotTitle randomly returns one of the InspiroBot messages.
+// This will return the message ID along with the message text.
+func generateInspirobotTitle() (int, string) {
 	id := -1
 	targetIndex := rand.Intn(len(inspirobotQuotes))
 	for id = range inspirobotQuotes {
@@ -135,10 +136,11 @@ func generateInspirationalQuote() (int, string) {
 		targetIndex -= 1
 	}
 
-	return id, getInspirationalQuote(id)
+	return id, getInspirobotTitle(id)
 }
 
-func getInspirationalQuote(id int) string {
+// getInspirobotTitle returns one of the InspiroBot messages.
+func getInspirobotTitle(id int) string {
 	if quote, exists := inspirobotQuotes[id]; exists {
 		return quote
 	}

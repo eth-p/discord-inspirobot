@@ -56,7 +56,7 @@ func init() {
 					}
 
 					// Respond with the contents of the original interaction.
-					titleQuote := getInspirationalQuote(titleId)
+					titleQuote := getInspirobotTitle(titleId)
 					interaction.Respond(&discordgo.InteractionResponseData{
 						Embeds: []*discordgo.MessageEmbed{makeQuoteEmbed(titleQuote, quoteUrl)},
 					})
@@ -88,11 +88,11 @@ func respondWithQuote(interaction bot.Interaction) error {
 	}
 
 	// Get the title quote.
-	titleId, titleQuote := generateInspirationalQuote()
+	titleId, titleText := generateInspirobotTitle()
 
 	// Share the inspirational quote.
 	interaction.RespondPrivately(&discordgo.InteractionResponseData{
-		Embeds: []*discordgo.MessageEmbed{makeQuoteEmbed(titleQuote, url.String())},
+		Embeds: []*discordgo.MessageEmbed{makeQuoteEmbed(titleText, url.String())},
 		Components: []discordgo.MessageComponent{
 			discordgo.ActionsRow{
 				Components: []discordgo.MessageComponent{
